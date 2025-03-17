@@ -1,0 +1,30 @@
+Implementado o método salvarOuAtualizar para salvar ou atualizar os dados do cliente no banco de dados MySQL.
+Adicionado o método atualizarAsaasId para atualizar o ID do cliente no banco de dados com o ID retornado do Asaas.
+Controlador de Cliente (ClienteController.php):
+
+Adcionado o metodo de criação de PIX em (PagamentoController.php)
+
+Atualizado o método salvarOuAtualizarCliente para:
+Salvar os dados do cliente no MySQL antes de registrá-lo no Asaas.
+Cadastrar o cliente no Asaas e atualizar o registro MySQL com o ID do Asaas.
+
+Problema no Redirecionamento da Pagina de Pagamento
+Modelo de Pagamento (Pagamento.php):
+
+Implementado o método criar para registrar os pagamentos no banco de dados.
+Adicionado o método atualizarStatus para atualizar o status do pagamento com base na resposta do Asaas.
+Implementado o método mapearStatus para converter os status do Asaas para o formato utilizado no banco de dados.
+Controlador de Pagamento (PagamentoController.php):
+
+Atualizado o método processar para:
+Processar pagamentos tanto para cartão de crédito quanto para PIX.
+Salvar os detalhes do pagamento no banco de dados e redirecionar para a página apropriada com base no status do pagamento.
+Implementar a lógica para lidar com a geração do QR Code para pagamentos PIX.
+Controlador de Planos (PlanoController.php):
+
+Implementado o método selecionarPlano para calcular o valor da assinatura com base no plano selecionado e no número de dependentes.
+Garantido que os valores da assinatura sejam armazenados na sessão para uso posterior.
+
+Views:
+Criada a view checkout.php para exibir o formulário de pagamento, permitindo a seleção entre cartão de crédito e PIX.
+Criada a view pix.php para exibir o QR Code gerado para pagamentos PIX e permitir a cópia do código.
